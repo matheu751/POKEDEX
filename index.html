@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Pokédex </title>
+        <link rel="stylesheet" href="./src/css/style.css">
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script defer src="scripts.js"> </script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <img class="logo" src="./src/images/pokebola-logo.png" alt="pokebola">
+                <button id="alter-theme">
+                    <iconify-icon icon="ri:sun-line" width="34" height="34"> </iconify-icon>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="nav-elements">
+                    <input class="search-pokemon" type="search" placeholder="Pokemon name or #">
+                    <select id="select-type" name="types">
+                        <option value=""> Type &darr; </option>
+                        <option value="fire-type"> Fire </option>
+                        <option value="water-type"> Water </option>
+                        <option value="grass-type"> Grass </option>
+                        <option value="flying-type"> Flying </option>
+                        <option value="bug-type"> Bug </option>
+                        <option value="normal-type"> Normal </option>
+                        <option value="poison-type"> Poison </option>
+                        <option value="electric-type"> Electric </option>
+                        <option value="steel-type"> Steel </option>
+                        <option value="psychic-type"> Psychic </option>
+                        <option value="ground-type"> Ground </option>
+                        <option value="ice-type"> Ice </option>
+                        <option value="ghost-type"> Ghost </option>
+                        <option value="rock-type"> Rock </option>
+                        <option value="fighting-type"> Fighting </option>
+                        <option value="dark-type"> Dark </option>
+                        <option value="dragon-type"> Dragon </option>
+                        <option value="fairy-type"> Fairy </option>
+                    </select>
+                </div>
+                <ul class="pokemon-list"> </ul>
+            </div>
+            <div class="modal">
+                <div class="content"> </div>
+            </div>
+            <button class="loader" onclick="showMorePokemons()"> <div> </div> </button>  
+        </main>
+
+    </body>
+</html>
