@@ -570,13 +570,12 @@ li .image {
         gap: 1rem;
     }
 
-    #select-type {
-        font-size: 16px;
+    .nav-elements input[type="search"] {
+        width: 100%;
     }
 
-    .card-pokemon {
-        min-width: 120px;
-        height: 140px;
+    #select-type {
+        font-size: 16px;
     }
 
     .content {
