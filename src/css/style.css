@@ -82,6 +82,55 @@ nav .logo {
     cursor: pointer;
 }
 
+nav .buttons {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    gap: 2rem;
+}
+
+nav .about {
+    padding: 0.6rem 0.8rem 0.6rem 1rem;
+    font-size: 19px;
+    border: none;
+    border-radius: 10px;
+    color: var(--clr-dark);
+    background-color: var(--clr-light-opaque);    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+nav .about:hover {
+    background-color: var(--clr-btn-type);
+    cursor: pointer;
+}
+
+.content-about {
+    position: relative;
+    max-width: 60vw;
+    top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: 10px;
+    background: #0D1117;
+    animation: animationContent .4s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.content-about p {
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-about iconify-icon {
+    color: #FFF;
+    margin-top: 40px;
+}
+
 nav #alter-theme {
     width: 41px;
     height: 41px;
@@ -161,10 +210,8 @@ main {
 
 .card-pokemon {
     position: relative;
-    min-width: 140px;
-    max-width: 140px;
+    width: 140px;
     height: 150px;
-    max-height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,7 +340,7 @@ li .image {
 
 /* --- POKEMON DETAILS --- */
 
-.modal {
+.modal, .modal-about {
     display: none;
     position: fixed;
     z-index: 1;
@@ -321,7 +368,7 @@ li .image {
     100% {
       transform:scale(1);
     }
-  }
+}
 
 .content .informations {
     position: absolute;
@@ -499,7 +546,7 @@ li .image {
 /* ---  RESPONSIVIDADE --- */
 
 @media screen and (max-width: 1000px) {
-    .content {
+    .content, .content-about {
         min-width: 80vw;
     }
 }
@@ -513,7 +560,7 @@ li .image {
         justify-content: space-evenly;
     }
 
-    .content {
+    .content, .content-about {
         box-sizing: content-box;
     }
 
@@ -563,10 +610,14 @@ li .image {
         height: 33px;
     }
 
+    nav .buttons {
+        gap: 0rem;
+    }
+
     .nav-elements {
         flex-direction: column;
         align-items: start;
-        padding-left: 12px;
+        padding: 0 12px;
         gap: 1rem;
     }
 
@@ -578,7 +629,26 @@ li .image {
         font-size: 16px;
     }
 
-    .content {
+    .card-pokemon {
+        width: 60vw;
+        height: 250px;
+    }
+
+    li .informations {
+        font-size: 25px;
+    }
+    
+    li .image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .type {
+        justify-content: space-evenly;
+        font-size: 20px;
+    }
+
+    .content, .content-about {
         min-width: 70vw;
     }
 

@@ -13,6 +13,8 @@ const selectType = document.getElementById('select-type')
 
 const returnBeginPage = document.querySelector('.logo')
 
+const aboutBtn = document.querySelector('.about')
+
 // state
 const actualTheme = localStorage.getItem('theme')
 
@@ -92,6 +94,17 @@ const modalSwitch = () => {
     }
     else {
         modal.style.display = 'block'
+    }
+}
+
+const modalSwitchAbout = () => {
+    const modalAbout = document.querySelector('.modal-about')
+    const actualStyle = modalAbout.style.display
+    if (actualStyle == 'block') {
+        modalAbout.style.display = 'none'
+    }
+    else {
+        modalAbout.style.display = 'block'
     }
 }
 
@@ -253,9 +266,15 @@ selectType.addEventListener('input', selectPokemonsType)
 
 returnBeginPage.addEventListener('click', returnTopPage)
 
+aboutBtn.addEventListener('click', modalSwitchAbout)
+
 window.onclick = (event) => {
     const modal = document.querySelector('.modal')
+    const modalAbout = document.querySelector('.modal-about')
     if (event.target == modal) {
         modalSwitch()
+    }
+    else if (event.target == modalAbout) {
+        modalSwitchAbout()
     }
 }

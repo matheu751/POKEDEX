@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./src/css/style.css">
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <script defer src="scripts.js"> </script>
     </head>
 
@@ -15,9 +16,15 @@
         <header>
             <nav>
                 <img class="logo" src="./src/images/pokebola-logo.png" alt="pokebola">
-                <button id="alter-theme">
-                    <iconify-icon icon="ri:sun-line" width="34" height="34"> </iconify-icon>
-                </button>
+                <div class="buttons">
+                    <button class="about">
+                        About
+                    </button>
+                    <button id="alter-theme">
+                        <iconify-icon icon="ri:sun-line" width="34" height="34"> </iconify-icon>
+                    </button>
+                </div>
+                
             </nav>
         </header>
 
@@ -26,7 +33,7 @@
                 <div class="nav-elements">
                     <input class="search-pokemon" type="search" placeholder="Pokemon name or #">
                     <select id="select-type" name="types">
-                        <option value=""> Type &darr; </option>
+                        <option value=""> Type + </option>
                         <option value="fire-type"> Fire </option>
                         <option value="water-type"> Water </option>
                         <option value="grass-type"> Grass </option>
@@ -51,6 +58,15 @@
             </div>
             <div class="modal">
                 <div class="content"> </div>
+            </div>
+            <div class="modal-about">
+                <div class="content-about"> 
+                    <p> Hey there, welcome to my Pokedex. This project includes the first to the fifth Generation of Pokemons (#001 to #648). </p>
+                    <p> If you want to know more about me and my other projects, you can access my Github below. </p> 
+                    <a href="https://github.com/matheu751"> 
+                        <iconify-icon icon="mdi:github" width="40" height="40"> </iconify-icon> 
+                    </a>        
+                </div>
             </div>
             <button class="loader" onclick="showMorePokemons()"> <div> </div> </button>  
         </main>
